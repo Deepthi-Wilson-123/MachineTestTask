@@ -1,0 +1,10 @@
+.card{
+    height: 450px;
+    width: 350px;
+    margin-left: 350px;
+    margin-right: auto;
+    margin-top: 50px;
+    align-items: center;
+    background-color:rgb(24, 22, 22);
+    color: aliceblue;
+}

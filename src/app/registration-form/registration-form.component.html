@@ -1,0 +1,53 @@
+<body>
+    <div class="container">
+        <div class="col-12 col-lg-4 ">
+            <h6>DATE : {{date|date:'fullDate'|uppercase}}</h6>
+
+        </div>
+        <div class="col-12 col-lg-4 ">
+            <form [formGroup]="registerForm" (ngSubmit)="register()">
+                <div class="card" style="padding: 25px;">
+                    <h3 style="padding: 15px;">Registration Form</h3>
+                    <div class="mb-3">
+                        <input type="text" name="firstname" placeholder="Enter your First Name"
+                            formControlName="firstname" class="form-control lg">
+                    </div>
+                    <div *ngIf="((this.registerForm.get('firstname')?.touched) && (this.registerForm.get('firstname')?.errors))"
+                        style="color: red;">Enter a valid first name</div>
+
+                    <div class="mb-3">
+                        <input type="text" name="lastname" placeholder="Enter your Last Name" formControlName="lastname"
+                            class="form-control lg">
+                    </div>
+                    <div *ngIf="((this.registerForm.get('lastname')?.touched) && (this.registerForm.get('lastname')?.errors))"
+                        style="color: red;">Enter a valid last name</div>
+
+                    <div class="mb-3">
+
+                        <input type="email" name="email" placeholder="Enter your email id" formControlName="email"
+                            class="form-control lg">
+                    </div>
+                    <div *ngIf="((this.registerForm.get('email')?.touched) && (this.registerForm.get('email')?.errors))"
+                        style="color: red;">Enter a valid email_id</div>
+
+                    <div class="mb-3">
+
+                        <input type="text" name="phonenumber" placeholder="Enter your mobile number"
+                            formControlName="phonenumber" class="form-control lg">
+                    </div>
+                    <div *ngIf="((this.registerForm.get('phonenumber')?.touched) && (this.registerForm.get('phonenumber')?.errors))"
+                        style="color: red;">Enter a valid mobile number</div>
+
+
+                    <button type="submit">REGISTER</button>
+                </div>
+
+
+            </form>
+        </div>
+        <div class="col-12 col-lg-4"></div>
+
+
+    </div>
+
+</body>
